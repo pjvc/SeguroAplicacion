@@ -1,0 +1,29 @@
+﻿@model List<Usuario>
+<h1>Usuarios</h1>
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cedula</th>
+            <th>Celular</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var Usuario in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>Usuario.Cliente)</td>
+                <td>@Html.DisplayFor(m=>Usuario.Cedula)</td>
+                <td>@Html.DisplayFor(m=>Usuario.Telefono)</td>
+                <td>@Html.DisplayFor(m=>Usuario.Edad)</td>
+            </tr>
+            
+                
+            
+        }
+    </tbody>
+</table>

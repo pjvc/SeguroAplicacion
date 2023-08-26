@@ -1,0 +1,26 @@
+﻿@model List<Seguro>
+<h1>Seguros</h1>
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Suma</th>
+            <th>Prima</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var Seguro in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>Seguro.NombreSeguro)</td>
+                <td>@Html.DisplayFor(m=>Seguro.CodigoSeguro)</td>
+                <td>@Html.DisplayFor(m=>Seguro.SumaAsegurada)</td>
+                <td>@Html.DisplayFor(m=>Seguro.Prima)</td>
+            </tr>
+        }
+    </tbody>
+</table>
